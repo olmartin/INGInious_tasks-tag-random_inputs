@@ -2,15 +2,15 @@
   "shapes": [
     { 
         "name": "square", 
-        "parameters": "the length of one size (integer)"
+        "parameters": "length of one size (integer)"
     },
     { 
         "name": "rectangle", 
-        "parameters": "the height and the width (both integers)" 
+        "parameters": "height and the width (both integers)" 
     },
     { 
         "name": "circle", 
-        "parameters": "the radius of the circle (double)"
+        "parameters": "radius of the circle (double)"
     }
   ]
 }

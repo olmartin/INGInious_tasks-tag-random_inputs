@@ -1,14 +1,15 @@
 accessible: true
 author: Olivier Martin
 context: |-
+    Given a shape detailled below, you are expected to write a function that computes the surface of that shape. We expect that your function returns a real number.
+
+    You may need to use the constant :math:`\pi`. In Java, this constant is defined in the class `Math <https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html>`_ as the constant ``Math.PI``.
+
     .. raw:: html
 
         Implement the method <code class="docutils literal"><span id="method_name"></span></code> that computes the air of a <span id="shape_name"></span>.<br>
-        The method must take as parameter <b><span id="parameters"></span></b>.
-
+        The method must take as parameter the <b><span id="parameters"></span></b>.
         <script src="m03Q5/input_random.js"></script>
-
-    Your method must return a ``double``. You may need to use ``Math.PI``.
 environment: java7mockito
 evaluate: best
 groups: false
@@ -22,53 +23,52 @@ network_grading: false
 order: 52
 problems:
     q1:
+        name: Ecrivez la signature et le corps de votre méthode.
         type: code
         default: ''
-        header: ''
-        name: Ecrivez la signature et le corps de votre méthode.
         language: java
-regenerate_input_random: 'on'
+        header: ''
 stored_submissions: 0
 submission_limit:
     amount: -1
     period: -1
 tags:
     '0':
+        visible: true
+        description: Le type de retour de votre fonction est correcte.
+        type: 0
         name: Return type
         id: return_type
-        description: Le type de retour de votre fonction est correcte.
-        visible: true
-        type: 0
     '1':
+        name: Name
+        id: name
         description: Le nom de votre fonction est correcte. Si vous n'avez pas obtenu
             ce tag, vérifiez que le nom que vous avez entré est le même que celui
             spécifié dans l'énoncé.
-        id: name
-        visible: true
         type: 0
-        name: Name
-    '2':
         visible: true
+    '2':
         description: Les types de vos paramètres sont corrects.
         name: Type of parameters
         id: params
+        visible: true
         type: 0
     '3':
-        visible: true
         name: Number of parameters
         type: 0
         id: n_params
         description: Le nombre de paramètres de votre fonction est correct.
-    '4':
-        id: compute
-        description: Votre calcul est correct
         visible: true
-        name: Computation
+    '4':
         type: 0
+        id: compute
+        name: Computation
+        visible: true
+        description: Votre calcul est correct
     '5':
         type: 1
         id: not_compile
-        description: Votre code ne compile pas.
-        name: Not compile
         visible: true
+        name: Not compile
+        description: Votre code ne compile pas.
 weight: 1.0
