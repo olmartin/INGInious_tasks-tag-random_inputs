@@ -1,0 +1,44 @@
+accessible: true
+author: Olivier MARTIN
+context: |+
+    .. raw:: html
+
+        Here is a right-angled triangle where the length of the bottom side is <b><span id="ipr1"></span></b> and the length of the left side is <b><span id="ipr2"></span></b>.<br>
+
+        <div style="text-align:center">
+            <canvas id="canvas" width="100%"></canvas>
+        </div>
+
+        <script src="task_input_random_01/input_random.js"></script>
+
+environment: default
+evaluate: best
+groups: false
+input_random: '2'
+limits:
+    memory: '200'
+    output: '1'
+    time: '30'
+name: Hypotenuse
+network_grading: false
+order: 13
+problems:
+    q1:
+        name: Your answer
+        type: code
+        default: ''
+        language: c
+        header: Compute the length of the hypotenuse and round your answer to the
+            floor.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        visible: true
+        description: This task use random inputs.
+        type: 2
+        name: Input random
+        id: ''
+weight: 1.0

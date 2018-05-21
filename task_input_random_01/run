@@ -1,0 +1,23 @@
+#!/bin/python3
+
+import subprocess, shlex, re, os, math
+from inginious import feedback, rst, input
+
+# Retrieve random inputs
+a = int(input.get_input("@random")[0] * 25 + 5)
+b = int(input.get_input("@random")[1] * 7 + 2)
+
+try:
+    response_user = int(input.get_input("q1"))
+    if (response_user == int(math.sqrt(a*a+b*b))):
+        feedback.set_grade(100)
+        feedback.set_global_result("success")
+    else:
+        feedback.set_global_feedback("The hypotenuse is not " + str(response_user))
+        feedback.set_grade(0)
+        feedback.set_global_result("failed")
+except ValueError:
+    feedback.set_global_feedback("Your input is invalid. Enter a rounded number to the floor. (e.g. 14.9 becomes 14)")
+    feedback.set_grade(0)
+    feedback.set_global_result("failed")
+
